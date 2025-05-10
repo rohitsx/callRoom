@@ -11,8 +11,11 @@
 	echo "<h1>Room $roomId</h1>";
 	echo "<script>const roomId = " . json_encode($roomId) . ";</script>";
 	?>
+
 	<video id="localVideo" autoplay playsinline muted />
-	<script src="../assets/js/joinRoom.js"></script>
+	<video id="remoteVideo" autoplay playsinline muted />
+
+	<script src="../assets/js/joinRoom.js" type="module"></script>
 </body>
 
 </html>

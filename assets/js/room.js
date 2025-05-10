@@ -1,32 +1,12 @@
-let stream;
-let videoElement;
-async function playVideoFromCamera() {
-	try {
-		const constraints = {
-			video: true,
-			audio: true,
-		};
-		stream = await navigator.mediaDevices.getUserMedia(constraints);
-		videoElement = document.querySelector("video#localVideo");
-		videoElement.srcObject = stream;
-	} catch (error) {
-		console.error("Error opening video camera.", error);
-	}
-}
+import playVideoFromCamera from "./lib/stream.js";
 
 async function makeCall() {
-	const configuration = {
-		iceServers: [
-			{
-				urls: "stun:stun.l.google.com:19302",
-			},
-		],
-	};
-	const peerConnection = new RTCPeerConnection(configuration);
+	const { peerConnection } = await playVideoFromCamera();
+
 	const offer = await peerConnection.createOffer();
 	await peerConnection.setLocalDescription(offer);
 
-	const userAnswer = await fetch("http://localhost:8000/api/create-room", {
+	await fetch("http://localhost:8000/api/add-sdp", {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json",
@@ -37,7 +17,28 @@ async function makeCall() {
 			roomId,
 		}),
 	});
-	console.log(await userAnswer.text());
+
+	async function pollForAnswer() {
+		const data = await fetch("http://localhost:8000/api/check-answer", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify({ roomId }),
+		});
+		const res = await data.text();
+
+		if (res !== "null") {
+			const { sdp } = JSON.parse(res);
+			const remoteDesc = new RTCSessionDescription(JSON.parse(sdp));
+			await peerConnection.setRemoteDescription(remoteDesc);
+		} else {
+			console.log("polling for res", res);
+			setTimeout(() => pollForAnswer(roomId), 2000);
+		}
+	}
+
+	await pollForAnswer();
 }
-//playVideoFromCamera();
+
 makeCall();

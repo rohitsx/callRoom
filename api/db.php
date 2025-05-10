@@ -17,7 +17,6 @@ try {
     room_id VARCHAR(255) NOT NULL UNIQUE,
     request_type ENUM('offer', 'answer') NOT NULL,
     sdp TEXT NOT NULL,
-		started_pairing BOOLEAN NOT NULL DEFAULT FALSE,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 		);
 	";

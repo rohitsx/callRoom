@@ -10,9 +10,10 @@
 		echo "<script>const roomId = " . json_encode($roomId) . ";</script>";
 		?>
 		<video id="localVideo" autoplay playsinline muted />
+		<video id="remoteVideo" autoplay playsinline muted />
 
 	</div>
-	<script src="../assets/js/room.js"></script>
+	<script src="../assets/js/room.js" type="module"></script>
 	<script>
 		data = {
 			roomId: roomId,

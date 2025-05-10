@@ -11,13 +11,17 @@ $sdp = json_encode($input["sdp"]);
 $roomId = $input["roomId"];
 $type = $input["type"];
 
+
 try {
 	switch ($route) {
-		case "/create-room":
-			include "./routehandler/createRoom.php";
+		case "/add-sdp":
+			include "./routehandler/addSdp.php";
 			break;
 		case "/join-room":
 			include "./routehandler/joinRoom.php";
+			break;
+		case "/check-answer":
+			include "./routehandler/checkAnswer.php";
 			break;
 		case "/leave-room":
 			include "./routehandler/leaveRoom.php";
