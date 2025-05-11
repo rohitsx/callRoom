@@ -1,0 +1,13 @@
+{
+	"name": "rohit/call-room",
+	"description": "WebRTC Call Room App",
+	"type": "project",
+	"autoload": {
+		"psr-4": {
+			"App\\": "api/"
+		}
+	},
+	"require": {
+		"cboden/ratchet": "^0.4"
+	}
+}
