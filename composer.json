@@ -4,10 +4,10 @@
 	"type": "project",
 	"autoload": {
 		"psr-4": {
-			"App\\": "api/"
+			"App\\": "ws/"
 		}
 	},
 	"require": {
-		"cboden/ratchet": "^0.4"
+		"cboden/ratchet": "^0.4.4"
 	}
 }

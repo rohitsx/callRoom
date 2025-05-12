@@ -3,14 +3,14 @@
 use Ratchet\Server\IoServer;
 use Ratchet\Http\HttpServer;
 use Ratchet\WebSocket\WsServer;
-use MyApp\Socket;
+use App\WsHandler;
 
-require dirname(__FILE__) . '/vendor/autoload.php';
+require __DIR__ . '/../vendor/autoload.php';
 
 $server = IoServer::factory(
 	new HttpServer(
 		new WsServer(
-			new Socket()
+			new WsHandler()
 		)
 	),
 	8080
