@@ -25,6 +25,7 @@ services:
       - nginx-proxy
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
+
       - ./nginx-proxy/acme:/etc/acme.sh
       - ./nginx-proxy/certs:/etc/nginx/certs:rw
     environment:
