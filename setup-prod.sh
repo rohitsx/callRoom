@@ -12,7 +12,7 @@ mkdir -p ./nginx/ssl
 
 # Remove any existing containers to start fresh
 echo "Stopping any existing containers..."
-sudo docker-compose -f docker-compose.prod.yml down
+sudo docker compose -f docker-compose.prod.yml down
 
 # Run certbot standalone to get the certificate
 echo "Obtaining SSL certificate using standalone mode..."
@@ -49,7 +49,7 @@ fi
 
 # Start all services
 echo "Starting all services..."
-sudo docker-compose -f docker-compose.prod.yml up -d
+sudo docker compose -f docker-compose.prod.yml up -d
 
 echo "Setup complete! Your site should be running at https://callroom.devrohit.tech"
 echo "You can check the status of your containers with: sudo docker ps"
