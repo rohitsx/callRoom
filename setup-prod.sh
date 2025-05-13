@@ -10,14 +10,14 @@ if [ ! -d "./certbot/conf/live/callroom.devrohit.tech" ]; then
   echo "No existing certificates found. We'll need to generate them."
   
   # Start nginx for certificate validation
-  docker-compose -f docker-compose.prod.yml up -d nginx
+  docker compose -f docker-compose.prod.yml up -d nginx
   
   # Wait for nginx to start
   echo "Waiting for nginx to start..."
   sleep 5
   
   # Get the certificates
-  docker-compose -f docker-compose.prod.yml run --rm certbot certonly --webroot \
+  docker compose -f docker-compose.prod.yml run --rm certbot certonly --webroot \
     --webroot-path=/var/www/certbot \
     --email rohitbindw@gmail.com \
     --agree-tos \
@@ -46,13 +46,13 @@ EOL
   fi
   
   # Restart nginx to apply SSL configs
-  docker-compose -f docker-compose.prod.yml restart nginx
+  docker compose -f docker-compose.prod.yml restart nginx
 else
   echo "Certificates already exist, no need to generate new ones."
 fi
 
 # Start all services
 echo "Starting all services..."
-docker-compose -f docker-compose.prod.yml up -d
+docker compose -f docker-compose.prod.yml up -d
 
 echo "Setup complete! Your site should be running at https://callroom.devrohit.tech"
