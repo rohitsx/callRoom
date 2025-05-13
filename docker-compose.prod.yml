@@ -1,101 +1,63 @@
 version: "3.9"
-
 services:
-  nginx-proxy:
-    image: nginxproxy/nginx-proxy
-    container_name: nginx-proxy
-    labels:
-      - "com.github.nginx-proxy.nginx-proxy=true"
-    ports:
-      - "80:80"
-      - "443:443"
-    volumes:
-      - /var/run/docker.sock:/tmp/docker.sock:ro
-      - ./nginx-proxy-data/certs:/etc/nginx/certs:ro
-      - ./nginx-proxy-data/vhost.d:/etc/nginx/vhost.d
-      - ./nginx-proxy-data/html:/usr/share/nginx/html
-    networks:
-      - app-network
-    restart: unless-stopped
-
-  acme-companion:
-    image: nginxproxy/acme-companion
-    container_name: acme-companion
-    depends_on:
-      - nginx-proxy
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock:ro
-      - ./nginx-proxy-data/acme:/etc/acme.sh
-      - ./nginx-proxy-data/certs:/etc/nginx/certs:rw
-    environment:
-      - NGINX_PROXY_CONTAINER=nginx-proxy
-      - DEFAULT_EMAIL=rohitbindw@gmail.com
-    networks:
-      - app-network
-    restart: unless-stopped
-
-  app-nginx:
-    image: nginx:alpine
-    container_name: app-nginx
-    depends_on:
-      - php
-      - websocket
-    volumes:
-      - ./code:/var/www/html
-      - ./nginx_config/app.conf:/etc/nginx/conf.d/default.conf:ro
-    environment:
-      - VIRTUAL_HOST=callroom.devrohit.tech
-      - VIRTUAL_PORT=80
-      - LETSENCRYPT_HOST=callroom.devrohit.tech
-      - LETSENCRYPT_EMAIL=rohitbindw@gmail.com
-    expose:
-      - "80"
-    networks:
-      - app-network
-    restart: unless-stopped
-
   php:
     build: ./code/
-    container_name: php-fpm
     expose:
       - 9000
+    restart: unless-stopped
     volumes:
       - ./code:/var/www/html
-    networks:
-      - app-network
-    restart: unless-stopped
+      - ./certbot/conf:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
 
   websocket:
     build: ./code/
-    container_name: websocket-server
-    command: sh -c "if [ ! -d vendor ]; then composer install --no-dev --optimize-autoloader; fi && php /var/www/html/ws/Ws.php"
-    working_dir: /var/www/html
-    expose:
-      - 8080
+    command: sh -c "composer install && php /var/www/html/ws/Ws.php"
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
     depends_on:
       - db
-    networks:
-      - app-network
-    restart: unless-stopped
+    volumes:
+      - ./code:/var/www/html
 
   db:
     image: mysql:latest
-    container_name: mysql-db
+    container_name: mysql
     environment:
       MYSQL_ROOT_PASSWORD: pass123
       MYSQL_DATABASE: mydb
       MYSQL_USER: myuser
       MYSQL_PASSWORD: pass123
-    volumes:
-      - mysql_data:/var/lib/mysql
-      - ./mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
-    networks:
-      - app-network
+    ports:
+      - "3306:3306"
     restart: unless-stopped
+    volumes:
+      - ./mysql_data:/var/lib/mysql
+      - ./mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
 
-volumes:
-  mysql_data:
+  nginx:
+    build:
+      context: .
+      dockerfile: ./nginx/Dockerfile
+    ports:
+      - 80:80
+      - 443:443
+    restart: unless-stopped
+    depends_on:
+      - websocket
+      - php
+    volumes:
+      - ./code:/var/www/html
+      - ./certbot/conf:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
+      - ./nginx/ssl:/etc/nginx/ssl
+    command: '/bin/sh -c ''while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g "daemon off;"'''
 
-networks:
-  app-network:
-    driver: bridge
+  certbot:
+    image: certbot/certbot
+    restart: unless-stopped
+    volumes:
+      - ./certbot/conf:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
