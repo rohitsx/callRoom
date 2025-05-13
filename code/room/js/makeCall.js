@@ -11,8 +11,12 @@ async function makeCall() {
 	let polite = false;
 	let to;
 
+	const isProduction = location.hostname === "callroom.devrohit.tech";
+
 	const wsProtocol = location.protocol === "https:" ? "wss" : "ws";
-	const wsUrl = `${wsProtocol}://${location.host}/ws?username=${localStorage.getItem("username")}&room-id=${roomId}`;
+	const wsHost = isProduction ? "callroom.devrohit.tech" : "localhost:8000";
+
+	const wsUrl = `${wsProtocol}://${wsHost}/ws?username=${localStorage.getItem("username")}&room-id=${roomId}`;
 	var conn = new WebSocket(wsUrl);
 
 	conn.onmessage = async (m) => {
