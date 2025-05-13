@@ -11,7 +11,8 @@ async function makeCall() {
 	let polite = false;
 	let to;
 
-	const wsUrl = `ws://localhost:8080?username=${localStorage.getItem("username")}&room-id=${roomId}`;
+	const wsProtocol = location.protocol === "https:" ? "wss" : "ws";
+	const wsUrl = `${wsProtocol}://${location.host}/ws?username=${localStorage.getItem("username")}&room-id=${roomId}`;
 	var conn = new WebSocket(wsUrl);
 
 	conn.onmessage = async (m) => {

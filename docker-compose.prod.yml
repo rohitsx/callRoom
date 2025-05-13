@@ -1,0 +1,84 @@
+version: "3.9"
+
+services:
+  nginx-proxy:
+    image: nginxproxy/nginx-proxy
+    container_name: nginx-proxy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+      - ./nginx-proxy/certs:/etc/nginx/certs
+      - ./nginx-proxy/vhost.d:/etc/nginx/vhost.d
+      - ./nginx-proxy/html:/usr/share/nginx/html
+    networks:
+      - app-network
+    restart: unless-stopped
+
+  acme-companion:
+    image: nginxproxy/acme-companion
+    container_name: acme-companion
+    depends_on:
+      - nginx-proxy
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./nginx-proxy/acme:/etc/acme.sh
+      - ./nginx-proxy/certs:/etc/nginx/certs:rw
+    environment:
+      - DEFAULT_EMAIL=rohitbindw@gmail.com
+    networks:
+      - app-network
+    restart: unless-stopped
+
+  php:
+    build: ./code/
+    expose:
+      - 9000
+    environment:
+      - VIRTUAL_HOST=callroom.devrohit.tech
+      - VIRTUAL_PORT=9000
+      - LETSENCRYPT_HOST=callroom.devrohit.tech
+      - LETSENCRYPT_EMAIL=rohitbindw@gmail.com
+    networks:
+      - app-network
+    restart: unless-stopped
+
+  websocket:
+    build: ./code/
+    command: sh -c "composer install && php /var/www/html/ws/Ws.php"
+    ports:
+      - "8080:8080"
+    environment:
+      - VIRTUAL_HOST=callroom.devrohit.tech
+      - VIRTUAL_PORT=8080
+      - LETSENCRYPT_HOST=callroom.devrohit.tech
+      - LETSENCRYPT_EMAIL=rohitbindw@gmail.com
+    depends_on:
+      - db
+    networks:
+      - app-network
+    restart: unless-stopped
+
+  db:
+    image: mysql:latest
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: pass123
+      MYSQL_DATABASE: mydb
+      MYSQL_USER: myuser
+      MYSQL_PASSWORD: pass123
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - app-network
+    restart: unless-stopped
+
+volumes:
+  mysql_data:
+  nginx-proxy:
+
+networks:
+  app-network:
+    driver: bridge
