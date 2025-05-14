@@ -29,7 +29,7 @@ services:
 
   nginx:
     build:
-      context: . # Explicitly set the build context to the current directory
+      context: .
       dockerfile: ./nginx/Dockerfile
     ports:
       - 80:80
