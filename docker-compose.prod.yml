@@ -1,17 +1,15 @@
 version: "3.9"
 services:
-  # PHP-FPM Service
   php:
     build: ./code/
     command: php-fpm
     expose:
       - 9000
     volumes:
-      - ./code:/var/www/html # Sync local code changes
+      - ./code:/var/www/html
     networks:
       - app-network
 
-  # WebSocket Server
   websocket:
     build: ./code/
     command: sh -c "composer install && php /var/www/html/ws/Ws.php"
@@ -22,7 +20,6 @@ services:
     networks:
       - app-network
 
-  # MySQL Database
   db:
     image: mysql:latest
     container_name: mysql
@@ -56,19 +53,15 @@ services:
     networks:
       - app-network
 
-  # Certbot (SSL Certificate Generator)
   certbot:
     image: certbot/certbot:latest
-    command: certonly --webroot --webroot-path=/var/www/certbot --email rohitbindw@gmail.com --agree-tos --no-eff-email -d callroom.devrohit.tech
+    command: sh -c "mkdir -p /var/www/certbot/.well-known/acme-challenge && certonly --webroot --webroot-path=/var/www/certbot --email rohitbindw@gmail.com --agree-tos --no-eff-email -d callroom.devrohit.tech"
     volumes:
       - ./certbot/www:/var/www/certbot:rw
       - ./certbot/conf:/etc/letsencrypt:rw
     depends_on:
       - nginx
-    networks:
-      - app-network
 
-# Define a custom network for all services
 networks:
   app-network:
     driver: bridge
