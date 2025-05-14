@@ -4,21 +4,14 @@ services:
     build: ./code/
     expose:
       - 9000
-    restart: unless-stopped
-    volumes:
-      - ./code:/var/www/html
-      - ./certbot/conf:/etc/letsencrypt:ro
 
   websocket:
     build: ./code/
     command: sh -c "composer install && php /var/www/html/ws/Ws.php"
     ports:
       - "8080:8080"
-    restart: unless-stopped
     depends_on:
       - db
-    volumes:
-      - ./code:/var/www/html
 
   db:
     image: mysql:latest
@@ -32,7 +25,6 @@ services:
       - "3306:3306"
     restart: unless-stopped
     volumes:
-      - ./mysql_data:/var/lib/mysql
       - ./mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
 
   nginx:
@@ -41,24 +33,13 @@ services:
       dockerfile: ./nginx/Dockerfile
     ports:
       - 80:80
-      - 443:443
-    restart: unless-stopped
     depends_on:
       - websocket
-      - php
     volumes:
-      - ./code:/var/www/html
-      - ./certbot/conf:/etc/letsencrypt:ro
-      - ./certbot/www:/var/www/certbot
-      - ./nginx/log:/var/log/nginx
-    command: '/bin/sh -c ''while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g "daemon off;"'''
-
+      - ./nginx/conf/:/etc/nginx/conf.d/:ro
+      - ./certbot/www/:/var/www/certbot/:ro
   certbot:
-    image: certbot/certbot
-    restart: unless-stopped
+    image: certbot/certbot:latest
     volumes:
-      - ./certbot/conf:/etc/letsencrypt
-      - ./certbot/www:/var/www/certbot
-    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew --webroot -w /var/www/certbot; sleep 12h & wait $${!}; done;'"
-    depends_on:
-      - nginx
+      - ./certbot/www/:/var/www/certbot/:rw
+      - ./certbot/conf/:/etc/letsencrypt/:rw
