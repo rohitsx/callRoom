@@ -1,10 +1,17 @@
 version: "3.9"
 services:
+  # PHP-FPM Service
   php:
     build: ./code/
+    command: php-fpm
     expose:
       - 9000
+    volumes:
+      - ./code:/var/www/html # Sync local code changes
+    networks:
+      - app-network
 
+  # WebSocket Server
   websocket:
     build: ./code/
     command: sh -c "composer install && php /var/www/html/ws/Ws.php"
@@ -12,7 +19,10 @@ services:
       - "8080:8080"
     depends_on:
       - db
+    networks:
+      - app-network
 
+  # MySQL Database
   db:
     image: mysql:latest
     container_name: mysql
@@ -23,24 +33,43 @@ services:
       MYSQL_PASSWORD: pass123
     ports:
       - "3306:3306"
-    restart: unless-stopped
     volumes:
+      - ./mysql/data:/var/lib/mysql # Persistent DB storage
       - ./mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - app-network
 
+  # Nginx (Reverse Proxy + SSL)
   nginx:
     build:
       context: .
       dockerfile: ./nginx/Dockerfile
     ports:
-      - 80:80
-      - 443:443
+      - "80:80"
+      - "443:443"
     depends_on:
+      - php
       - websocket
     volumes:
-      - ./nginx/conf/:/etc/nginx/conf.d/:ro
-      - ./certbot/www/:/var/www/certbot/:ro
+      - ./nginx/conf:/etc/nginx/conf.d:ro
+      - ./certbot/www:/var/www/certbot:ro
+      - ./certbot/conf:/etc/letsencrypt:ro
+    networks:
+      - app-network
+
+  # Certbot (SSL Certificate Generator)
   certbot:
     image: certbot/certbot:latest
+    command: certonly --webroot --webroot-path=/var/www/certbot --email your-email@example.com --agree-tos --no-eff-email -d callroom.devrohit.tech
     volumes:
-      - ./certbot/www/:/var/www/certbot/:rw
-      - ./certbot/conf/:/etc/letsencrypt/:rw
+      - ./certbot/www:/var/www/certbot:rw
+      - ./certbot/conf:/etc/letsencrypt:rw
+    depends_on:
+      - nginx
+    networks:
+      - app-network
+
+# Define a custom network for all services
+networks:
+  app-network:
+    driver: bridge
