@@ -15,7 +15,6 @@ try {
 			)
 		),
 		8080,
-		'0.0.0.0'
 	);
 
 	echo "WebSocket server running on 0.0.0.0:8080\n";

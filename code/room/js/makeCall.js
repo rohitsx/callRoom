@@ -14,7 +14,7 @@ async function makeCall() {
 	const isProduction = location.hostname === "callroom.devrohit.tech";
 
 	const wsProtocol = location.protocol === "https:" ? "wss" : "ws";
-	const wsHost = isProduction ? "callroom.devrohit.tech" : "localhost:8000";
+	const wsHost = isProduction ? "callroom.devrohit.tech" : "localhost:8080";
 
 	const wsUrl = `${wsProtocol}://${wsHost}/ws?username=${localStorage.getItem("username")}&room-id=${roomId}`;
 	var conn = new WebSocket(wsUrl);
