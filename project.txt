@@ -1,0 +1,984 @@
+-----------------------------------------------------------------------------------------------
+-- FRONT COVER PAGE --
+-----------------------------------------------------------------------------------------------
+
+                        [IMAGE PLACEHOLDER: University Logo, similar to source 1]
+                                    DR. C.V. RAMAN UNIVERSITY
+                                KOTA, BILASPUR (C.G.)
+                INSTITUTE OF OPEN AND DISTANCE EDUCATION
+
+                                    A Project Report
+                                          On
+
+                                     CALL ROOM
+
+                             For the award of the degree of
+
+                   BACHELOR OF COMPUTER APPLICATION (BCA)
+
+                                          By
+                                     Rohit Bind
+                           Registration No.: [YOUR REGISTRATION NUMBER]
+
+                                    Under the Guidance of
+                                  Mr. Kamaldeep Dwivedi
+
+                                       Session
+                             [ACADEMIC SESSION, e.g., 2023-2024]
+
+        @[ACADEMIC YEAR, e.g., 2024] Rohit Bind All Rights Reserved.
+
+-----------------------------------------------------------------------------------------------
+-- INNER COVER PAGE (Optional, if your university requires it) --
+-----------------------------------------------------------------------------------------------
+
+                                     CALL ROOM
+
+                                  A Project Report
+                                    Submitted to
+
+                               DR. C.V. RAMAN UNIVERSITY
+                           INSTITUTE OF OPEN AND DISTANCE EDUCATION
+                                 Kota, Bilaspur (C.G.)
+
+                             For the award of the degree of
+
+                   BACHELOR OF COMPUTER APPLICATION (BCA)
+
+                                          By
+                                     Rohit Bind
+                           Registration No.: [YOUR REGISTRATION NUMBER]
+
+                                    Under the Guidance of
+                                  Mr. Kamaldeep Dwivedi
+
+                                       Session
+                             [ACADEMIC SESSION, e.g., 2023-2024]
+
+-----------------------------------------------------------------------------------------------
+-- DECLARATION --
+-----------------------------------------------------------------------------------------------
+
+                                     DECLARATION
+
+I, the undersigned, solemnly declare that the Project Report entitled **"CALL ROOM"** is based on my own work carried out during the course of my study under the supervision of **Mr. Kamaldeep Dwivedi**. [cite: 3, 60]
+
+I assert that the statements made and conclusions drawn are an outcome of my research work. [cite: 3, 61] I further certify that:
+
+i.  The work contained in the Project Report is original and has been done by me under the general supervision of my supervisor. [cite: 4, 62]
+ii. The work has not been submitted to any other Institute for any other Degree/Diploma/Certificate in this University or any other University of India or abroad. [cite: 5, 63]
+iii. I have followed the guidelines provided by the University in writing the Project Report. [cite: 6, 64]
+iv. I have conformed to the norms and guidelines given in the concerned Ordinance of the University. [cite: 7, 65]
+v.  Whenever I have used materials (data, theoretical analysis, and text) from other sources, I have given due credit to them by citing them in the text of the Project Report and giving their details in the references. [cite: 8, 66]
+vi. Whenever I have quoted written materials from other sources, I have put them under quotation marks and given due credit to the sources by citing them and giving required details in the references. [cite: 9, 67]
+
+Date: [DATE]
+Place: Kota, Bilaspur (C.G.)
+
+(Signature)
+**Rohit Bind**
+Registration No.: [YOUR REGISTRATION NUMBER]
+
+-----------------------------------------------------------------------------------------------
+-- CERTIFICATE --
+-----------------------------------------------------------------------------------------------
+
+                                     CERTIFICATE
+
+This is to certify that the work incorporated in the Project Report entitled **"CALL ROOM"** is a record of own work carried out by **Rohit Bind**, Registration No.: **[YOUR REGISTRATION NUMBER]**, under my supervision for the award of the degree of **Bachelor of Computer Application (BCA)** of the Institute of Open and Distance Education, Dr. C.V. Raman University, Kota, Bilaspur (C.G.)-India. [cite: 11, 43, 69]
+
+To the best of my knowledge and belief, the Project Report:
+
+i.  Embodies the work of the candidate himself. [cite: 12, 71]
+ii. Has duly been completed. [cite: 12, 71]
+iii. Is up to the desired standard both in respect of content and language for being referred to the examiners. [cite: 13, 72]
+
+**Supervisor:**
+(Signature)
+**Mr. Kamaldeep Dwivedi**
+[Supervisor's Designation, if known, e.g., Assistant Professor, Department of Computer Science]
+
+(Signature of Academic Coordinator) [cite: 14]        (Seal of IODE) [cite: 14]
+[Name of Academic Coordinator]
+Academic Coordinator, IODE
+Dr. C.V. Raman University
+
+-----------------------------------------------------------------------------------------------
+-- ACKNOWLEDGEMENT --
+-----------------------------------------------------------------------------------------------
+
+                                   ACKNOWLEDGEMENT
+
+It is a matter of immense pleasure to express my overwhelming sense of gratitude and devotion to all those who have helped me in completing this project. [cite: 18, 49]
+
+I would like to express my deepest appreciation and sincere thanks to my esteemed and learned guide, **Mr. Kamaldeep Dwivedi**, [Supervisor's Designation, if known], for his invaluable guidance, constant encouragement, and insightful suggestions throughout the development of this project report. His supervision has been instrumental in the successful completion of this work.
+
+I am also thankful to the faculty members of the Institute of Open and Distance Education, Dr. C.V. Raman University, for their support and for providing a conducive learning environment.
+
+Finally, I express my indebtedness to all who have directly or indirectly contributed to the successful completion of my project work, including my family and friends for their understanding and encouragement. [cite: 19, 53]
+
+Date: [DATE]
+
+(Signature)
+**Rohit Bind**
+Registration No.: [YOUR REGISTRATION NUMBER]
+
+-----------------------------------------------------------------------------------------------
+-- TABLE OF CONTENTS --
+-----------------------------------------------------------------------------------------------
+
+                                 TABLE OF CONTENTS
+
+    CHAPTER NO.       TITLE                                       PAGE NO.
+    ---------------------------------------------------------------------------
+                      ABSTRACT                                      vii
+                      LIST OF FIGURES                               viii
+
+    1.                INTRODUCTION                                    1
+                      1.1 Project Aims and Objectives                 1
+                      1.2 Background of Project                       2
+                      1.3 Operation Environment                       3
+                          1.3.1 Hardware Requirements                 3
+                          1.3.2 Software Requirements (Development)   3
+                          1.3.3 Software Requirements (Deployment)    4
+
+    2.                SYSTEM ANALYSIS                                 5
+                      2.1 Software Requirement Specification          5
+                          2.1.1 Functional Requirements               5
+                          2.1.2 Non-Functional Requirements         6
+                      2.2 Existing System vs. Proposed System         7
+                          2.2.1 Existing System (General)           7
+                          2.2.2 Proposed System (Call Room)         8
+                      2.3 Software Tools Used                         8
+
+    3.                SYSTEM DESIGN                                   10
+                      3.1 System Architecture                         10
+                      3.2 Database Design                             11
+                          3.2.1 Table: room                         11
+                      3.3 Data Flow Diagrams (DFDs)                   12
+                          3.3.1 DFD Level 0 (Context Diagram)       12
+                          3.3.2 DFD Level 1 (Detailed Diagram)      13
+
+    4.                SYSTEM IMPLEMENTATION                           15
+                      4.1 Module Description                          15
+                          4.1.1 Frontend Modules                    15
+                          4.1.2 Backend Modules (PHP & Ratchet)     17
+                          4.1.3 Database Module                     18
+                          4.1.4 Web Server Module (Nginx)           18
+                          4.1.5 Containerization Modules (Docker)   19
+                      4.2 Screen Shots                                20
+
+    5.                SYSTEM TESTING                                  24
+                      5.1 Unit Testing                                24
+                      5.2 Integration Testing                         25
+                      5.3 Testing Strategy                            26
+
+    6.                CONCLUSION & FUTURE SCOPE                       27
+                      6.1 Conclusion                                  27
+                      6.2 Future Scope                                27
+
+    7.                REFERENCES                                      29
+
+    (Note: Adjust page numbers once the document is finalized)
+
+-----------------------------------------------------------------------------------------------
+-- LIST OF FIGURES (Example, add more as you create actual figures) --
+-----------------------------------------------------------------------------------------------
+
+                                 LIST OF FIGURES
+
+    FIGURE NO.        TITLE                                         PAGE NO.
+    ---------------------------------------------------------------------------
+    3.1               Call Room System Architecture                    10
+    3.2               E-R Diagram for `room` table                     12
+    3.3               DFD Level 0 (Context Diagram)                    13
+    3.4               DFD Level 1 (Detailed Diagram)                   14
+    4.1               Home Page (Entering Room Name)                   20
+    4.2               Call Page (Local Video, Waiting for Peer)        21
+    4.3               Call Page (Connected with Peer)                  22
+    4.4               Call Ended Page                                  23
+    4.5               Database `room` table structure                  23
+
+    (Note: Adjust page numbers once the document is finalized)
+
+-----------------------------------------------------------------------------------------------
+-- ABSTRACT --
+-----------------------------------------------------------------------------------------------
+
+                                      ABSTRACT
+
+The "Call Room" project is a lightweight, peer-to-peer video and audio calling application designed for simplicity and ease of use. Built using a modern web technology stack including PHP, JavaScript (WebRTC), Ratchet (for WebSockets), and MySQL, the application allows users to create or join communication rooms by specifying a room name. This facilitates direct video and audio communication between two participants within a room instance.
+
+Key features of the "Call Room" application include its peer-to-peer architecture leveraging WebRTC for direct media streaming, room-based calling, dynamic pairing of users by the WebSocket server, and robust WebRTC negotiation logic (polite/impolite peers) to minimize connection failures. The system is designed to be lightweight and beginner-friendly, with detailed deployment instructions. Furthermore, the entire application is containerized using Docker and Docker Compose, ensuring easy setup and consistent operation across different environments. The backend uses MySQL for basic room and client management during the pairing process. The project aims to provide a straightforward and efficient solution for real-time video communication without the need for complex setups or third-party plugins.
+
+-----------------------------------------------------------------------------------------------
+-- CHAPTER 1: INTRODUCTION --
+-----------------------------------------------------------------------------------------------
+
+                                  CHAPTER 1: INTRODUCTION
+
+This chapter provides an overview of the "Call Room" project. It outlines the project's aims and objectives, discusses the background and motivation for its development, and details the operational environment including necessary hardware and software prerequisites.
+
+**1.1 Project Aims and Objectives**
+
+The primary aim of the "Call Room" project is to develop a simple and effective web-based application for real-time, two-party video and audio communication.
+The specific objectives to achieve this aim are as follows:
+* To design and implement a room-based system where users can create or join a communication session using a unique room name.
+* To utilize WebRTC (Web Real-Time Communication) technology for establishing direct peer-to-peer media streams (video and audio) between users, minimizing latency and server load.
+* To employ WebSockets (via Ratchet library in PHP) for real-time signaling between clients and the server, facilitating the WebRTC connection setup process, including offer/answer exchange and ICE candidate negotiation.
+* To develop a dynamic pairing mechanism on the server-side that connects the first two users who join the same room.
+* To implement "polite" and "impolite" peer logic for robust WebRTC negotiation to handle potential race conditions and ensure reliable connection establishment.
+* To create a user-friendly interface using HTML, CSS, and JavaScript for easy interaction, allowing users to start and end calls seamlessly.
+* To use a MySQL database for temporary storage of room and client information during the pairing process.
+* To containerize the entire application (PHP backend, WebSocket server, Nginx web server, and MySQL database) using Docker and Docker Compose for simplified deployment, portability, and development setup.
+* To provide a lightweight and easily understandable codebase, making it suitable as a learning resource for WebRTC and related technologies.
+
+**1.2 Background of Project**
+
+In an increasingly interconnected world, the demand for accessible and straightforward real-time communication tools is ever-present. While numerous sophisticated video conferencing solutions exist, they often come with complexities, dependencies on proprietary software or plugins, or significant server-side resource requirements for media relay. This project, "Call Room," was conceived to address the need for a simpler, more direct approach to two-party video calls.
+
+The core motivations behind this project are:
+* **Simplicity:** To create a video calling application with a minimal feature set, focusing on the essential functionality of connecting two users in a room.
+* **Peer-to-Peer Communication:** To leverage WebRTC to establish direct P2P media connections between users. This reduces server overhead as media data does not need to be relayed through the server (except for initial signaling and NAT traversal assistance), potentially lowering latency and improving privacy.
+* **Open Web Technologies:** To build the application using standard and open web technologies like HTML5, CSS3, JavaScript, PHP, and WebSockets, ensuring broad browser compatibility and avoiding the need for users to install additional software.
+* **Learning and Demonstration:** To serve as a practical example of implementing a WebRTC-based video calling application, demonstrating the integration of frontend WebRTC APIs with a backend signaling server (PHP/Ratchet) and database (MySQL).
+* **Ease of Deployment:** To use Docker containerization to package the application and its dependencies, making it easy for others to set up, run, and develop further.
+
+The "Call Room" project provides a foundational platform for P2P video communication, highlighting how these technologies can be combined to create effective real-time interaction experiences.
+
+**1.3 Operation Environment**
+
+To successfully develop, deploy, and run the "Call Room" application, specific hardware and software environments are required.
+
+    **1.3.1 Hardware Requirements (Recommended Minimum):**
+    * **Processor:** Intel Core i3 or equivalent / AMD Ryzen 3 or equivalent.
+    * **Memory (RAM):** 4 GB RAM (8 GB recommended for smoother development, especially when running Docker).
+    * **Storage:**
+        * For Development: Approximately 1-2 GB free disk space (for Docker images, source code, dependencies).
+        * For Running Application: Approximately 500MB for containers and database.
+    * **Peripherals:**
+        * Webcam (for video input).
+        * Microphone (for audio input).
+        * Speakers/Headphones (for audio output).
+    * **Network:** A stable internet connection is required for downloading dependencies, Docker images, and for users to connect to each other (especially for NAT traversal).
+
+    **1.3.2 Software Requirements (For Development & Manual Setup):**
+    * **Operating System:** Windows, macOS, or Linux.
+    * **Web Browser:** A modern web browser with WebRTC support (e.g., Google Chrome, Mozilla Firefox, Safari, Microsoft Edge).
+    * **PHP:** Version 8.1 or newer (as specified in `code/dockerfile`), with `mysqli` extension.
+    * **Composer:** PHP dependency manager.
+    * **MySQL Server:** For database management.
+    * **Web Server (for manual setup):** Nginx, Apache, or PHP's built-in server for development.
+    * **Command Line Interface / Terminal:** For running commands.
+    * **Text Editor / IDE:** For code editing (e.g., VS Code, PhpStorm, Sublime Text).
+    * **Git:** For version control (optional, but recommended for managing code).
+    * **(Optional but Recommended for Development) Docker Desktop:** For building and running Docker containers locally. Includes Docker Engine and Docker Compose.
+
+    **1.3.3 Software Requirements (For Dockerized Deployment - Recommended):**
+    * **Operating System:** Any OS that can run Docker (Windows, macOS, Linux).
+    * **Docker Engine:** The core Docker platform.
+    * **Docker Compose:** Tool for defining and running multi-container Docker applications.
+    * **Web Browser:** A modern web browser with WebRTC support for accessing the application.
+
+The Dockerized setup is recommended as it encapsulates all necessary software dependencies (PHP, Nginx, MySQL, Ratchet and its dependencies) within containers, simplifying the deployment process significantly.
+
+-----------------------------------------------------------------------------------------------
+-- CHAPTER 2: SYSTEM ANALYSIS --
+-----------------------------------------------------------------------------------------------
+
+                                  CHAPTER 2: SYSTEM ANALYSIS
+
+This chapter delves into the analysis of the "Call Room" system. It includes the Software Requirement Specification (SRS) detailing functional and non-functional requirements, a comparison between general existing systems and the proposed "Call Room" system, and a list of software tools and technologies utilized in the project.
+
+**2.1 Software Requirement Specification (SRS)**
+
+The Software Requirement Specification outlines what the "Call Room" application is expected to do.
+
+    **2.1.1 Functional Requirements:**
+    The system shall provide the following functionalities:
+    1.  **Room Creation/Joining:**
+        * FR1.1: Users must be able to specify a room name on the home page (`index.html`).
+        * FR1.2: Upon submitting a room name, the user shall be redirected to the specific room page (`/room/index.php`).
+    2.  **User Pairing:**
+        * FR2.1: The WebSocket server (`WsHandler.php`, `RoomHandler.php`) must establish a connection with clients joining a room.
+        * FR2.2: The `RoomHandler` shall check the MySQL `room` table if another user is already waiting in the same `room_id`.
+        * FR2.3: If a user is found waiting, the system shall "pair" the new user with the waiting user.
+        * FR2.4: The server shall send a `paired` message to both clients, indicating the `resourceId` of their peer.
+        * FR2.5: The first user to join the room (or the one designated by the server) shall be marked as the "polite" peer for WebRTC negotiation.
+        * FR2.6: If no user is found waiting, the current user's `client_id` (WebSocket `resourceId`) and `room_id` shall be added to the `room` table.
+        * FR2.7: The `RoomHandler` should remove the first user (who was waiting) from the `room` table once a pair is formed to allow new pairs for the same room name in the future (though the current implementation is for 2 participants at a time per instance).
+    3.  **Media Stream Access:**
+        * FR3.1: The application (`stream.js`) must request access to the user's camera and microphone using `navigator.mediaDevices.getUserMedia`.
+        * FR3.2: The local video stream must be displayed in the `localVideo` HTML element on the room page.
+    4.  **WebRTC Signaling and Connection:**
+        * FR4.1: Once paired, clients (`makeCall.js`) shall initiate the WebRTC peer connection process (`pc.js`).
+        * FR4.2: WebRTC signaling messages (SDP offers, SDP answers, ICE candidates) must be exchanged between peers via the WebSocket server.
+        * FR4.3: Signaling messages sent via WebSocket must include a `to` field specifying the `resourceId` of the recipient peer.
+        * FR4.4: The "polite" peer logic must handle offer collisions gracefully during negotiation.
+        * FR4.5: ICE (Interactive Connectivity Establishment) candidates shall be gathered and exchanged to facilitate NAT traversal.
+        * FR4.6: The system should use a STUN server (configurable in `pc.js`, e.g., `stun:stun.l.google.com:19302`) to discover public IP addresses and assist in NAT traversal.
+    5.  **Peer-to-Peer Media Streaming:**
+        * FR5.1: Upon successful WebRTC signaling and connection establishment, a direct peer-to-peer media stream (video and audio) shall be established between the two clients.
+        * FR5.2: The remote user's video stream shall be displayed in the `remoteVideo` HTML element on the room page.
+    6.  **Call Termination:**
+        * FR6.1: Users must be able to end the call by clicking an "End Call" button (which redirects to home) or by closing the browser tab/window.
+        * FR6.2: When a call is ended or the browser is closed (`beforeunload` event), a message (`endCall`) shall be sent to the peer via WebSocket to notify them.
+        * FR6.3: The `RTCPeerConnection` and WebSocket connection shall be closed on call termination.
+        * FR6.4: Users shall be redirected to a "Call Ended" page (`/call-ended/index.html`) if explicitly ended from the UI using this mechanism.
+    7.  **Database Interaction:**
+        * FR7.1: The `Db.php` script must provide a function to establish a connection to the MySQL database.
+        * FR7.2: The `RoomHandler.php` script must interact with the `room` table to add users, find pairs, and remove users.
+
+    **2.1.2 Non-Functional Requirements:**
+    * **NFR1. Performance:**
+        * The system should establish P2P connections with minimal delay after pairing.
+        * Video and audio streaming should be real-time with low latency, primarily dependent on the network conditions of the peers.
+        * WebSocket signaling messages should be delivered promptly.
+    * **NFR2. Usability:**
+        * The user interface should be simple and intuitive, allowing users to easily enter a room name and join/start a call.
+        * Visual feedback should be provided (e.g., local video display, remote video display upon connection).
+    * **NFR3. Reliability:**
+        * The WebRTC negotiation process, including polite/impolite peer logic, should be robust to minimize connection failures.
+        * The WebSocket server should maintain stable connections during a call session.
+        * The database connection should be handled gracefully.
+    * **NFR4. Scalability (Limited by Design):**
+        * The current design is for two participants per room instance.
+        * The WebSocket server (Ratchet) should be capable of handling multiple concurrent rooms and connections, limited by server resources.
+        * The database is used for transient pairing data, so it's not a heavy transactional load system.
+    * **NFR5. Security:**
+        * WebRTC media streams are encrypted end-to-end by default (SRTP).
+        * Signaling messages via WebSocket are sent over WSS (WebSocket Secure) if the main site is on HTTPS. The provided Nginx configuration listens on HTTP (port 80), so signaling would be over WS unless HTTPS is configured. The `makeCall.js` checks `location.protocol` to use `ws` or `wss`.
+        * Database credentials should be securely managed (currently in `Db.php` and `docker-compose.dev.yml`).
+    * **NFR6. Maintainability:**
+        * The codebase is structured into frontend (HTML, CSS, JS) and backend (PHP) components.
+        * JavaScript code is modularized (e.g., `pc.js`, `stream.js`, `makeCall.js`).
+        * PHP code uses PSR-4 autoloading for namespaces (`App\\`).
+        * Configuration parameters (like STUN server, DB credentials) are identifiable.
+    * **NFR7. Portability & Deployability:**
+        * The application is containerized using Docker and Docker Compose, allowing it to run consistently across different environments that support Docker.
+        * Manual setup instructions are also provided for environments without Docker.
+    * **NFR8. Browser Compatibility:**
+        * The application should function correctly on modern web browsers that support WebRTC, `getUserMedia`, and ES6 JavaScript modules (e.g., latest versions of Chrome, Firefox, Edge, Safari).
+
+**2.2 Existing System vs. Proposed System**
+
+This section compares the general characteristics of typical existing video communication systems with the "Call Room" application.
+
+    **2.2.1 Existing System (General Characteristics):**
+    Many existing video communication solutions often exhibit one or more of the following characteristics:
+    * **Centralized Media Relaying:** Often route audio and video data through central servers (MCU/SFU), which can handle multi-party calls but may introduce latency and increase operational costs.
+    * **Proprietary Software/Plugins:** Some older or specialized systems require users to install browser plugins or dedicated desktop applications.
+    * **Complex Feature Sets:** May offer a wide array of features beyond simple video calling, such as screen sharing, recording, chat, user accounts, and extensive management tools, which can make them feel heavy for simple use cases.
+    * **Account Requirements:** Frequently require users to create accounts and log in before use.
+    * **Higher Resource Consumption:** Both client-side and server-side resource usage can be higher due to complex features or media processing.
+    * **Cost Factor:** Commercial solutions often involve subscription fees or licensing costs.
+
+    **2.2.2 Proposed System (Call Room):**
+    The "Call Room" application is designed with a different philosophy, emphasizing:
+    * **Peer-to-Peer Media:** Leverages WebRTC for direct P2P media streams between the two participants, reducing server load for media and potentially lowering latency. The server is only involved in signaling.
+    * **Browser-Based & Plugin-Free:** Works directly in modern web browsers supporting WebRTC without requiring any additional installations.
+    * **Lightweight & Focused:** Provides a core, simple two-party video calling functionality without an extensive list of peripheral features.
+    * **No Account System (Implicit):** Users join rooms by name without explicit account creation. User identification for pairing is via WebSocket connection resource IDs, and `localStorage` can be used for a username but it's not a formal account system.
+    * **Simplified Deployment:** Docker containerization makes it easy to deploy and run all components (web server, PHP application, WebSocket server, database).
+    * **Open Source Stack:** Built entirely using open-source technologies (PHP, JavaScript, WebRTC, Ratchet, MySQL, Nginx, Docker).
+    * **Educational Value:** The simpler codebase and architecture make it easier to understand the fundamentals of WebRTC and signaling.
+    * **Reusable Rooms:** The concept of rooms allows for easy ad-hoc call setup.
+
+**2.3 Software Tools Used**
+
+The development and operation of the "Call Room" project rely on the following software tools and technologies:
+
+* **Frontend Development:**
+    * **HTML5:** For structuring the web pages (`index.html`, `room/index.php`, `call-ended/index.html`).
+    * **CSS3:** For styling the user interface (`assets/main.css`), featuring a custom retro theme.
+    * **JavaScript (ES6 Modules):** For client-side logic, DOM manipulation, and WebRTC implementation (`room/js/makeCall.js`, `room/js/pc.js`, `room/js/stream.js`).
+    * **WebRTC API:** Browser API for real-time peer-to-peer communication (video, audio).
+
+* **Backend Development:**
+    * **PHP:** Server-side scripting language (Version 8.1.0 as per `code/dockerfile`) used for the WebSocket server logic.
+    * **Ratchet:** A PHP library for asynchronously serving WebSockets, used to build the signaling server (`ws/Ws.php`, `ws/WsHandler.php`). (Version ^0.4.4 as per `composer.json`)
+    * **Composer:** A dependency manager for PHP, used to manage Ratchet and other PHP libraries.
+
+* **Database:**
+    * **MySQL:** Relational database management system used for storing temporary room and client information for pairing (`mysql/init.sql`, `ws/Db.php`). (Latest version used in `docker-compose.dev.yml`)
+
+* **Web Server:**
+    * **Nginx:** High-performance web server used as a reverse proxy, for serving static files (HTML, CSS, JS) and PHP files via PHP-FPM (`nginx/default.conf`).
+
+* **Containerization:**
+    * **Docker:** Platform for developing, shipping, and running applications in containers.
+    * **Docker Compose:** Tool for defining and running multi-container Docker applications (`docker-compose.dev.yml`, `code/dockerfile`, `nginx/dockerfile`).
+
+* **Version Control:**
+    * **Git:** Distributed version control system (implied by project structure and README mentioning `git clone`).
+
+* **Development Environment & Utilities:**
+    * **Web Browser Developer Tools:** (e.g., Chrome DevTools, Firefox Developer Tools) for debugging JavaScript, inspecting network requests, and viewing console logs.
+    * **Terminal/Command Line Interface:** For executing Docker commands, PHP scripts, etc.
+    * **Text Editor/IDE:** (e.g., VSCode, Sublime Text, PhpStorm) for writing and editing code.
+
+-----------------------------------------------------------------------------------------------
+-- CHAPTER 3: SYSTEM DESIGN --
+-----------------------------------------------------------------------------------------------
+
+                                  CHAPTER 3: SYSTEM DESIGN
+
+This chapter outlines the design of the "Call Room" application, covering its overall architecture, database design, and data flow. The design focuses on creating a simple yet effective peer-to-peer video communication system.
+
+**3.1 System Architecture**
+
+The "Call Room" application employs a client-server architecture for signaling and a peer-to-peer architecture for media streaming. The main components are:
+
+1.  **Client (Web Browser):**
+    * **User Interface (HTML, CSS, JavaScript):** Provides the visual elements for users to enter room names, view local and remote video, and end calls.
+    * **WebRTC Engine:** Built into the browser, responsible for capturing media (camera/microphone), encoding/decoding, and establishing direct P2P connections.
+    * **Signaling Logic (JavaScript - `makeCall.js`):** Communicates with the WebSocket server to exchange control messages (room joining, pairing info, SDP offers/answers, ICE candidates) necessary for setting up the WebRTC connection.
+
+2.  **Web Server (Nginx):**
+    * Serves static frontend files (HTML, CSS, JS).
+    * Passes PHP requests to the PHP-FPM process (though PHP is primarily used for the WebSocket server in this project, `room/index.php` is a PHP file that could have server-side logic).
+    * Acts as a reverse proxy for WebSocket connections, forwarding `/ws` requests to the Ratchet WebSocket server.
+
+3.  **Application Server Components:**
+    * **PHP-FPM:** Processes PHP files (though primarily the WebSocket server runs as a separate PHP CLI process).
+    * **WebSocket Server (PHP Ratchet - `Ws.php`, `WsHandler.php`, `RoomHandler.php`):**
+        * Manages WebSocket connections from clients.
+        * Handles client pairing logic by interacting with the MySQL database.
+        * Relays signaling messages (SDP, ICE candidates) between paired clients.
+
+4.  **Database Server (MySQL):**
+    * Stores temporary information about rooms and clients waiting to be paired. The `room` table facilitates the discovery of a peer in the same room.
+
+**Interaction Flow:**
+* A user accesses the application via Nginx.
+* The frontend JavaScript establishes a WebSocket connection to the Ratchet server (proxied by Nginx).
+* The `RoomHandler` on the WebSocket server uses MySQL to find a pair or register the user as waiting.
+* Once paired, signaling messages are exchanged via WebSocket.
+* WebRTC establishes a direct P2P media connection between the clients.
+
+<br>
+<div style="text-align: center;">
+    [IMAGE PLACEHOLDER: Call Room System Architecture Diagram]
+    <p><b>Figure 3.1:</b> Call Room System Architecture</p>
+</div>
+<br>
+
+**3.2 Database Design**
+
+The database is used for a simple purpose: to store information about users who have joined a room and are waiting for a peer.
+
+    **3.2.1 Table: `room`**
+    This table temporarily holds records of clients who have entered a specific room and are awaiting another client to join for a P2P call.
+
+    * **Schema Definition (from `mysql/init.sql`):**
+        ```sql
+        CREATE TABLE IF NOT EXISTS room (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            room_id VARCHAR(255) NOT NULL,
+            client_id VARCHAR(255) NOT NULL, -- WebSocket connection resourceId
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        );
+
+        CREATE INDEX idx_room_id ON room (room_id);
+        CREATE INDEX idx_client_id ON room (client_id);
+        ```
+
+    * **Columns:**
+        * `id` (INT, AUTO_INCREMENT, PRIMARY KEY): A unique identifier for each record in the table.
+        * `room_id` (VARCHAR(255), NOT NULL): The name of the room the client has joined. This is used to match clients for pairing.
+        * `client_id` (VARCHAR(255), NOT NULL): The unique identifier for the client's WebSocket connection (e.g., `resourceId` from Ratchet). This is used by the server to communicate back to a specific client or to inform a peer about the other's ID.
+        * `created_at` (TIMESTAMP, DEFAULT CURRENT_TIMESTAMP): Timestamp indicating when the client joined the room and was added to this table. Can be useful for cleanup or diagnostics.
+
+    * **Indexes:**
+        * `idx_room_id`: An index on the `room_id` column to speed up searches for clients in the same room.
+        * `idx_client_id`: An index on the `client_id` column, useful if needing to quickly find or delete a specific client's record.
+
+    * **Entity-Relationship (E-R) Diagram:**
+        For this simple schema, the E-R diagram would consist of a single entity, `RoomEntry` or `WaitingClient`.
+
+        <br>
+        <div style="text-align: center;">
+            [IMAGE PLACEHOLDER: E-R Diagram for the `room` table]
+            <p><b>Figure 3.2:</b> E-R Diagram for `room` table</p>
+        </div>
+        <br>
+
+**3.3 Data Flow Diagrams (DFDs)**
+
+Data Flow Diagrams illustrate how data moves through the system.
+
+    **3.3.1 DFD Level 0 (Context Diagram)**
+    The context diagram shows the entire "Call Room" system as a single process interacting with external entities (users).
+
+    * **External Entities:**
+        * User A
+        * User B
+    * **Process:**
+        * Call Room System
+    * **Data Flows:**
+        * User A -> Call Room System: Room Name Input, Local Media, Signaling Data (Offer/ICE), End Call Signal.
+        * Call Room System -> User A: UI Pages, Pairing Status, Peer Signaling Data (Answer/ICE), Peer End Call Signal.
+        * User B -> Call Room System: Room Name Input, Local Media, Signaling Data (Answer/ICE), End Call Signal.
+        * Call Room System -> User B: UI Pages, Pairing Status, Peer Signaling Data (Offer/ICE), Peer End Call Signal.
+        * (Note: Media stream is P2P, so it's not directly flowing *through* the central "Call Room System" process in its entirety, but the system facilitates its setup).
+
+    <br>
+    <div style="text-align: center;">
+        [IMAGE PLACEHOLDER: DFD Level 0 (Context Diagram) for Call Room System]
+        <p><b>Figure 3.3:</b> DFD Level 0 (Context Diagram)</p>
+    </div>
+    <br>
+
+    **3.3.2 DFD Level 1 (Detailed Diagram)**
+    This diagram breaks down the "Call Room System" into its major sub-processes and shows data flows between them and data stores.
+
+    * **External Entities:** User A, User B
+    * **Processes:**
+        1.  **UI Interaction Handler (Frontend JS)**: Manages user input, displays video, initiates connections.
+        2.  **WebSocket Signaling Manager (Ratchet Server - WsHandler, RoomHandler)**: Manages WebSocket connections, relays signaling messages.
+        3.  **User Pairing Logic (RoomHandler)**: Handles pairing of users in rooms.
+        4.  **WebRTC P2P Connection Manager (Browser's WebRTC Engine)**: Establishes and manages direct media streams.
+        5.  **Web Server (Nginx)**: Serves frontend assets.
+    * **Data Stores:**
+        1.  **Room Waiting List DB (MySQL `room` table)**
+    * **Key Data Flows:**
+        1.  User -> (5) Web Server: HTTP Request for page.
+        2.  (5) Web Server -> User: HTML/CSS/JS.
+        3.  User (via 1. UI Interaction Handler) -> (2) WebSocket Signaling Manager: Join Room (Room ID, User ID).
+        4.  (2) WebSocket Signaling Manager -> (3) User Pairing Logic: Pairing Request (Room ID, User ID).
+        5.  (3) User Pairing Logic -> (DS1) Room Waiting List DB: Check for pair / Add user to waitlist.
+        6.  (DS1) Room Waiting List DB -> (3) User Pairing Logic: Pair found / User added.
+        7.  (3) User Pairing Logic -> (2) WebSocket Signaling Manager: Pairing Result (Peer ID / Wait status).
+        8.  (2) WebSocket Signaling Manager -> User (via 1. UI Interaction Handler): Pairing Info (Peer ID / Polite status).
+        9.  User (via 1. UI Interaction Handler & 4. WebRTC Manager) -> (2) WebSocket Signaling Manager: SDP Offer/Answer, ICE Candidates (with `to` Peer ID).
+        10. (2) WebSocket Signaling Manager -> Other User (via 1. UI Interaction Handler & 4. WebRTC Manager): Relayed SDP Offer/Answer, ICE Candidates.
+        11. User (via 4. WebRTC Manager) <-> Other User (via 4. WebRTC Manager): Direct P2P Encrypted Media Stream (Video/Audio).
+        12. User (via 1. UI Interaction Handler) -> (2) WebSocket Signaling Manager: End Call message.
+        13. (2) WebSocket Signaling Manager -> Other User (via 1. UI Interaction Handler): Relayed End Call message.
+        14. (3) User Pairing Logic -> (DS1) Room Waiting List DB: Remove user from waitlist on disconnect/pairing.
+
+    <br>
+    <div style="text-align: center;">
+        [IMAGE PLACEHOLDER: DFD Level 1 for Call Room System]
+        <p><b>Figure 3.4:</b> DFD Level 1 (Detailed Diagram)</p>
+    </div>
+    <br>
+
+This design provides a decoupled system where the server facilitates connections, but the intensive media exchange happens directly between peers, making it efficient for two-party calls.
+
+-----------------------------------------------------------------------------------------------
+-- CHAPTER 4: SYSTEM IMPLEMENTATION --
+-----------------------------------------------------------------------------------------------
+
+                               CHAPTER 4: SYSTEM IMPLEMENTATION
+
+This chapter describes the implementation details of the "Call Room" project. It covers the various modules that constitute the application, their functionalities, and provides placeholders for screenshots of the user interface and key components. The implementation follows the design outlined in the previous chapter, utilizing PHP, JavaScript (WebRTC), Ratchet, MySQL, Nginx, and Docker.
+
+**4.1 Module Description**
+
+The "Call Room" application is composed of several interconnected modules, categorized by their role in the system (frontend, backend, database, web server, containerization).
+
+    **4.1.1 Frontend Modules (Client-Side)**
+    These modules run in the user's web browser and are responsible for the user interface and client-side WebRTC logic. All primary frontend files are located within the `code/` directory and its subdirectories.
+
+    * **1. Home Page (`code/index.html`)**
+        * **Functionality:** This is the entry point of the application. It presents a simple form where users can input a "Room Name" to either create a new room or join an existing one. Upon submission, the form makes a GET request to `/room` (which resolves to `code/room/index.php`) with the `room-id` as a query parameter.
+        * **Technologies:** HTML, CSS.
+        * **Key Elements:** Form with text input for room name, submit button ("Join Room"). It also includes "Project Highlights."
+
+    * **2. Call Page (`code/room/index.php`)**
+        * **Functionality:** This is the main page for the video call. It receives the `room-id` from the URL query parameter. It initializes the JavaScript necessary for the call. It contains two video elements: `localVideo` for the user's own camera feed and `remoteVideo` for the peer's video feed. An "End Call" button (link to "/") is provided. The PHP part primarily echoes the `roomId` into a JavaScript variable.
+        * **Technologies:** PHP (to pass `roomId` to JS), HTML, CSS, JavaScript (via linked module scripts).
+        * **Key Elements:** `<h1>` displaying Room ID, `localVideo` tag, `remoteVideo` tag, "End Call" button.
+
+    * **3. WebRTC & Signaling Logic (`code/room/js/makeCall.js`)**
+        * **Functionality:** This is the core JavaScript module for the calling functionality. It:
+            * Initializes `RTCPeerConnection` (using `pc.js`) and local media stream (using `stream.js`).
+            * Establishes a WebSocket connection to the signaling server (`ws://<host>:<port>/ws`), passing `username` (from `localStorage`) and `roomId` as query parameters.
+            * Handles incoming WebSocket messages:
+                * `paired`: Receives peer's `resourceId` and `politeInstance` status, initiates WebRTC negotiation.
+                * `description`: Handles SDP offers/answers from the peer, performs `setRemoteDescription` and `setLocalDescription` as per polite/impolite logic.
+                * `candidate`: Adds received ICE candidates from the peer using `addIceCandidate`.
+                * `endCall`: Closes the `RTCPeerConnection` and WebSocket when the peer ends the call, redirects to `/call-ended`.
+            * Handles `RTCPeerConnection` events:
+                * `onnegotiationneeded`: Creates and sends an SDP offer.
+                * `onicecandidate`: Sends local ICE candidates to the peer via WebSocket.
+                * `connectionstatechange`: Logs connection state changes.
+            * Adds local media tracks to the `RTCPeerConnection`.
+            * Handles `beforeunload` event to notify the peer about call termination if the tab/window is closed.
+        * **Technologies:** JavaScript (ES6 Modules), WebRTC API, WebSocket API.
+
+    * **4. RTCPeerConnection Setup (`code/room/js/pc.js`)**
+        * **Functionality:** This module exports a function `start()` that creates and configures an `RTCPeerConnection` object.
+            * It initializes `RTCPeerConnection` with STUN server configuration (e.g., `iceServers: [{ urls: "stun:stun.my-stun-server.tld" }]` - placeholder, recommends using `stun:stun.l.google.com:19302`).
+            * Sets up the `ontrack` event handler, which is triggered when remote media tracks are received. It assigns the remote stream to the `remoteVideo` element.
+        * **Technologies:** JavaScript (ES6 Modules), WebRTC API.
+
+    * **5. Local Media Stream Setup (`code/room/js/stream.js`)**
+        * **Functionality:** This module exports an asynchronous function `playVideoFromCamera()` that:
+            * Requests access to the user's camera and microphone using `navigator.mediaDevices.getUserMedia({ video: true, audio: true })`.
+            * Assigns the obtained local media stream to the `localVideo` HTML element.
+            * Returns the local stream object for use in `makeCall.js`.
+        * **Technologies:** JavaScript (ES6 Modules), MediaDevices API.
+
+    * **6. Styling (`code/assets/main.css`)**
+        * **Functionality:** Provides the visual styling for all pages, including layout, colors (retro theme), fonts (`VT323`), and responsiveness.
+        * **Technologies:** CSS3.
+
+    * **7. Call Ended Page (`code/call-ended/index.html`)**
+        * **Functionality:** A simple page displayed when a call is explicitly ended or when the `endCall` process redirects to it. It informs the user that the call has ended and provides a button to go back to the home page.
+        * **Technologies:** HTML, CSS.
+
+    **4.1.2 Backend Modules (PHP & Ratchet - Server-Side)**
+    These modules run on the server and handle WebSocket connections, signaling, and user pairing. They are located within the `code/ws/` directory.
+
+    * **1. WebSocket Server Bootstrap (`code/ws/Ws.php`)**
+        * **Functionality:** This script initializes and runs the Ratchet WebSocket server.
+            * It includes necessary Ratchet components (`IoServer`, `HttpServer`, `WsServer`).
+            * It instantiates `WsHandler` which contains the application's WebSocket logic.
+            * It starts the server listening on a specific port (hardcoded to 8080).
+            * Includes basic error handling for server startup.
+        * **Technologies:** PHP, Ratchet.
+
+    * **2. WebSocket Handler (`code/ws/WsHandler.php`)**
+        * **Functionality:** Implements Ratchet's `MessageComponentInterface` to handle WebSocket events:
+            * `onOpen(ConnectionInterface $conn)`: Called when a new client connects.
+                * Extracts `room-id` from the connection query parameters.
+                * Creates a `RoomHandler` instance.
+                * Calls `RoomHandler::handler_user_pairing()` to attempt pairing.
+                * If paired, sends `paired` and `politeInstance` messages to both clients. The user who was waiting is then dropped from the `room` table by `RoomHandler` via `drop_user` (called within `onOpen` for the initiating client if pairing is successful with the *other* client's `resourceId`).
+                * If not paired, sends a "No Pair Found" message.
+                * Stores the connection in an `SplObjectStorage` (`$clients`) and a map (`$clientMap`) using `resourceId` as key.
+            * `onMessage(ConnectionInterface $from, $msg)`: Called when a client sends a message.
+                * Decodes the JSON message.
+                * If the message contains a `to` field (for WebRTC signaling), it forwards the message to the specified recipient client using their `resourceId` from `$clientMap`.
+                * If the message contains `endCall` (with a `to` field), it forwards an `endCall: true` message to the specified peer.
+            * `onClose(ConnectionInterface $conn)`: Called when a client disconnects.
+                * Calls `RoomHandler::drop_user()` to remove the client from the `room` table in the database if they were waiting.
+                * Removes the client from `$clients` and `$clientMap`.
+            * `onError(ConnectionInterface $conn, \Exception $e)`: Called on a WebSocket error. Logs the error and closes the connection.
+        * **Technologies:** PHP, Ratchet.
+
+    * **3. Room Logic Handler (`code/ws/RoomHandler.php`)**
+        * **Functionality:** Manages the logic for pairing users in rooms and interacts with the database.
+            * `__construct($roomId, $clientId)`: Initializes with the current room ID and client ID.
+            * `find_pair()`: Queries the `room` table in MySQL to find another client in the same `room_id` but with a different `client_id`. Returns the peer's `client_id` if found.
+            * `add_user()`: Inserts the current client's `room_id` and `client_id` into the `room` table, indicating they are waiting for a pair.
+            * `drop_user($clientId)`: Deletes a client from the `room` table, typically after they are paired or if they disconnect while waiting.
+            * `handler_user_pairing()`: Orchestrates the pairing. Calls `find_pair()`. If a pair is found, it returns the peer's `client_id`. Otherwise, it calls `add_user()` and implies the user is now waiting (returns null from `add_user`, which is handled by `WsHandler`).
+        * **Technologies:** PHP, MySQLi.
+
+    * **4. Database Connection (`code/ws/Db.php`)**
+        * **Functionality:** Provides a helper function `get_db_connection()` to establish and return a MySQLi database connection.
+            * Contains database credentials (servername "mysql" - for Docker internal networking, username, password, dbname). These are overridden by environment variables in Docker setup for the `db` service itself, but this file shows what the PHP code expects.
+            * Includes basic error handling for connection failures.
+        * **Technologies:** PHP, MySQLi.
+
+    * **5. Composer Configuration (`code/composer.json`)**
+        * **Functionality:** Defines project metadata and dependencies.
+            * Specifies the `cboden/ratchet` dependency (version `^0.4.4`).
+            * Configures PSR-4 autoloading for the `App` namespace, mapping it to the `ws/` directory.
+        * **Technologies:** JSON (Composer format).
+
+    **4.1.3 Database Module**
+
+    * **MySQL Schema (`mysql/init.sql`)**
+        * **Functionality:** This SQL script is executed when the MySQL Docker container starts for the first time (due to volume mount to `/docker-entrypoint-initdb.d`).
+            * Creates the `room` table if it doesn't exist, with columns `id`, `room_id`, `client_id`, and `created_at`.
+            * Creates indexes on `room_id` and `client_id` for performance.
+        * **Technologies:** SQL.
+
+    **4.1.4 Web Server Module (Nginx)**
+
+    * **Nginx Configuration (`nginx/default.conf`)**
+        * **Functionality:** Configures Nginx for the Call Room application.
+            * Listens on port 80.
+            * Sets the web root to `/var/www/html` (where `code/` is mounted in Docker).
+            * Defines `index.html` and `index.php` as default index files.
+            * Includes a `try_files` directive to handle routing for frontend (if using a JS router, though this project uses direct file access or simple GET params).
+            * **Crucially, proxies requests to `/ws` to the WebSocket server running at `websocket:8080` (Docker service name). This section includes headers necessary for WebSocket proxying (`Upgrade`, `Connection`).**
+            * Configures PHP processing by passing `.php` files to the PHP-FPM service (`php:9000`).
+        * **Technologies:** Nginx configuration syntax.
+
+    **4.1.5 Containerization Modules (Docker)**
+
+    * **1. Docker Compose (`docker-compose.dev.yml`)**
+        * **Functionality:** Defines and orchestrates the multi-container application.
+            * `php` service: Builds from `code/dockerfile`, exposes port 9000 for PHP-FPM.
+            * `websocket` service: Builds from `code/dockerfile`, runs `composer install` and then `php /var/www/html/ws/Ws.php`. Maps host port 8080 to container port 8080. Depends on `db`.
+            * `db` service: Uses the official `mysql:latest` image. Sets environment variables for MySQL root password, database name, user, and password. Maps host port 3306 to container port 3306. Mounts `./mysql` (containing `init.sql`) to `/docker-entrypoint-initdb.d` for automatic database initialization.
+            * `nginx` service: Builds from `nginx/dockerfile` (which copies `nginx/default.conf`). Maps host port 80 to container port 80. Mounts `./code` to `/var/www/html` in the Nginx container to serve the application files. Depends on `websocket` and `php`.
+        * **Technologies:** YAML (Docker Compose format).
+
+    * **2. PHP Dockerfile (`code/dockerfile`)**
+        * **Functionality:** Defines the image for the `php` and `websocket` services.
+            * Starts from `php:8.1.0-fpm` base image.
+            * Installs system dependencies (`unzip`, `curl`, `git`, `zip`) and PHP extensions (`mysqli`, `pdo`, `pdo_mysql`).
+            * Creates a non-root user `appuser`.
+            * Copies Composer binary from the official `composer:2` image.
+            * Sets the working directory to `/var/www/html`.
+            * Copies the application code (from the context where `docker-compose` builds this Dockerfile, i.e., `code/`) into the image.
+            * Runs `composer install` to install PHP dependencies.
+            * Changes ownership of files to `appuser`.
+        * **Technologies:** Dockerfile syntax.
+
+    * **3. Nginx Dockerfile (`nginx/dockerfile`)**
+        * **Functionality:** Defines the image for the `nginx` service.
+            * Starts from the official `nginx` base image.
+            * Copies the custom Nginx configuration (`./nginx/default.conf`) into the appropriate location in the image (`/etc/nginx/conf.d/default.conf`).
+        * **Technologies:** Dockerfile syntax.
+
+**4.2 Screen Shots**
+
+This section is for including visual representations of the application's user interface and other relevant components. You will need to capture these screenshots yourself.
+
+<br>
+<div style="border: 1px dashed #ccc; padding: 10px; margin-bottom: 15px;">
+    <p style="text-align: center; font-weight: bold;">IMAGE PLACEHOLDER</p>
+    <p style="text-align: center;">Please insert a screenshot of the Home Page here.</p>
+    <p style="text-align: center;"><em>(Description: Shows the initial page where the user enters the "Room Name". This corresponds to <code>code/index.html</code>.)</em></p>
+</div>
+<p style="text-align: center;"><b>Figure 4.1:</b> Home Page (User entering room name)</p>
+<br>
+
+<br>
+<div style="border: 1px dashed #ccc; padding: 10px; margin-bottom: 15px;">
+    <p style="text-align: center; font-weight: bold;">IMAGE PLACEHOLDER</p>
+    <p style="text-align: center;">Please insert a screenshot of the Call Page when a user has just joined and is waiting.</p>
+    <p style="text-align: center;"><em>(Description: Shows the call interface (`code/room/index.php`) with the local video feed visible, but the remote video area is likely empty or showing a waiting indicator, before a peer connects.)</em></p>
+</div>
+<p style="text-align: center;"><b>Figure 4.2:</b> Call Page (Local Video visible, Waiting for Peer)</p>
+<br>
+
+<br>
+<div style="border: 1px dashed #ccc; padding: 10px; margin-bottom: 15px;">
+    <p style="text-align: center; font-weight: bold;">IMAGE PLACEHOLDER</p>
+    <p style="text-align: center;">Please insert a screenshot of the Call Page when two users are connected.</p>
+    <p style="text-align: center;"><em>(Description: Shows the call interface (`code/room/index.php`) with both the local video feed and the remote peer's video feed visible.)</em></p>
+</div>
+<p style="text-align: center;"><b>Figure 4.3:</b> Call Page (Connected with Peer, Local and Remote Video)</p>
+<br>
+
+<br>
+<div style="border: 1px dashed #ccc; padding: 10px; margin-bottom: 15px;">
+    <p style="text-align: center; font-weight: bold;">IMAGE PLACEHOLDER</p>
+    <p style="text-align: center;">Please insert a screenshot of the Call Ended Page.</p>
+    <p style="text-align: center;"><em>(Description: Shows the page displayed after a call is terminated, <code>code/call-ended/index.html</code>.)</em></p>
+</div>
+<p style="text-align: center;"><b>Figure 4.4:</b> Call Ended Page</p>
+<br>
+
+<br>
+<div style="border: 1px dashed #ccc; padding: 10px; margin-bottom: 15px;">
+    <p style="text-align: center; font-weight: bold;">IMAGE PLACEHOLDER</p>
+    <p style="text-align: center;">Please insert a screenshot of the `room` table structure in MySQL.</p>
+    <p style="text-align: center;"><em>(Description: Shows the columns and data types of the `room` table, possibly from a tool like phpMyAdmin, DBeaver, or MySQL Workbench after running `mysql/init.sql`.)</em></p>
+</div>
+<p style="text-align: center;"><b>Figure 4.5:</b> Database `room` table structure</p>
+<br>
+
+These modules and components work together to provide the functionality of the "Call Room" application, from user interaction on the frontend to signaling and data management on the backend, all packaged conveniently with Docker.
+
+-----------------------------------------------------------------------------------------------
+-- CHAPTER 5: SYSTEM TESTING --
+-----------------------------------------------------------------------------------------------
+
+                                  CHAPTER 5: SYSTEM TESTING
+
+System testing is a critical phase to ensure the "Call Room" application functions as expected, is reliable, and meets the defined requirements. This chapter outlines the testing strategies and types of tests that would be performed. Given the nature of the project, testing would focus on functionality, connectivity, and basic usability.
+
+**5.1 Unit Testing**
+
+Unit testing involves testing individual components or modules of the application in isolation to verify their correctness.
+
+* **Frontend JavaScript Modules (`code/room/js/`)**
+    * **`stream.js` (`playVideoFromCamera` function):**
+        * **Test Case:** Verify that `navigator.mediaDevices.getUserMedia` is called with correct constraints (`{video: true, audio: true}`).
+        * **Test Case:** Mock `getUserMedia` to simulate successful media stream acquisition; check if the stream is correctly assigned to the `localVideo` element's `srcObject`.
+        * **Test Case:** Mock `getUserMedia` to simulate failure (e.g., permission denied); check if errors are handled gracefully (e.g., console error logged).
+    * **`pc.js` (`start` function):**
+        * **Test Case:** Verify that `RTCPeerConnection` is created with the specified STUN server configuration.
+        * **Test Case (mocking):** Simulate `ontrack` event; check if `remoteVideo.srcObject` is set correctly when a track is unmuted and `srcObject` isn't already set.
+    * **`makeCall.js` (Core Logic):**
+        * **Test Case:** Verify WebSocket connection is attempted to the correct URL.
+        * **Test Case (mocking WebSocket):** Simulate `paired` message from server; check if `pc.onnegotiationneeded` and `pc.onicecandidate` handlers are set up and `to` variable is assigned. Check `polite` status.
+        * **Test Case (mocking WebSocket):** Simulate `description` (offer/answer) message from server; verify `pc.setRemoteDescription` is called. Test offer collision logic based on `polite` status and `makingOffer` flag. Verify an answer is created and sent if an offer is received.
+        * **Test Case (mocking WebSocket):** Simulate `candidate` message from server; verify `pc.addIceCandidate` is called. Test error handling if `addIceCandidate` fails (unless `ignoreOffer` is true).
+        * **Test Case (mocking WebSocket):** Simulate `endCall` message from server; verify `pc.close()`, `conn.close()`, and redirection to `/call-ended` occur.
+        * **Test Case:** Verify `beforeunload` event handler sends an `endCall` message and closes connections if WebSocket is open.
+* **Backend PHP Modules (`code/ws/`)**
+    * **`Db.php` (`get_db_connection` function):**
+        * **Test Case (requires live DB or mock):** Verify successful database connection with correct credentials.
+        * **Test Case (requires live DB or mock):** Verify connection failure is handled (e.g., `die()` message).
+    * **`RoomHandler.php`:**
+        * **Test Case (mocking `get_db_connection`):** `add_user()`: Verify correct SQL INSERT statement is prepared and executed.
+        * **Test Case (mocking `get_db_connection`):** `find_pair()`: Verify correct SQL SELECT statement is prepared and executed. Test scenarios where a pair is found and not found.
+        * **Test Case (mocking `get_db_connection`):** `drop_user()`: Verify correct SQL DELETE statement is prepared and executed.
+        * **Test Case (mocking DB methods):** `handler_user_pairing()`: Test logic flow – returns peer client ID if `find_pair` is successful, calls `add_user` otherwise.
+    * **`WsHandler.php` (Requires mocking `ConnectionInterface` and `RoomHandler`):**
+        * **Test Case `onOpen()`:** Simulate a new connection. Verify `RoomHandler::handler_user_pairing()` is called.
+            * Test scenario: Pairing successful - check if `paired` and `politeInstance` messages are sent to both clients correctly.
+            * Test scenario: No pair found - check if "No Pair Found" message is sent to the client.
+            * Verify client is added to `$clients` and `$clientMap`.
+        * **Test Case `onMessage()`:**
+            * Simulate a signaling message with a `to` field. Verify the message is forwarded to the correct client via `$clientMap`.
+            * Simulate an `endCall` message. Verify it's forwarded.
+            * Simulate an invalid JSON message; check if it's handled without crashing.
+        * **Test Case `onClose()`:** Simulate a client disconnection. Verify `RoomHandler::drop_user()` is called and client is removed from `$clients` and `$clientMap`.
+        * **Test Case `onError()`:** Simulate an error. Verify the connection is closed and error is logged.
+
+**5.2 Integration Testing**
+
+Integration testing focuses on verifying the interaction between different modules of the application.
+
+* **Frontend-Backend WebSocket Communication:**
+    * **Test Case:** Two clients (browser instances) join the same room. Verify that the `WsHandler` correctly receives connections, uses `RoomHandler` and the database to pair them, and sends `paired` messages back to both clients.
+    * **Test Case:** Test the complete signaling flow:
+        1.  Client A (polite) sends an offer.
+        2.  WebSocket server relays it to Client B.
+        3.  Client B receives the offer, creates an answer, and sends it back.
+        4.  WebSocket server relays the answer to Client A.
+        5.  Client A receives the answer.
+        6.  Verify ICE candidates are exchanged similarly.
+* **WebRTC P2P Connection Establishment:**
+    * **Test Case:** After successful signaling, verify that a direct P2P connection is established between two clients and that video/audio streams are transmitted and received correctly. (Test with clients on the same network and different networks if possible, to check STUN server effectiveness).
+    * **Test Case:** Test the "polite" vs "impolite" peer negotiation: attempt to create offer collisions and verify that the polite peer correctly handles them, preventing connection glare.
+* **Call Termination Flow:**
+    * **Test Case:** User A clicks "End Call" or closes tab. Verify that User B receives the `endCall` notification via WebSocket, and both `RTCPeerConnection`s are closed.
+* **Database Integration:**
+    * **Test Case:** When a user joins a room and no one is waiting, verify their `client_id` and `room_id` are correctly inserted into the `room` table.
+    * **Test Case:** When a second user joins the same room, verify the first user's record is found by `RoomHandler`, they are paired, and the first user's record is subsequently removed from the `room` table (as per current logic to allow new pairs).
+    * **Test Case:** If a user disconnects while waiting, verify their record is removed from the `room` table by `onClose` via `RoomHandler::drop_user`.
+* **Nginx Proxying:**
+    * **Test Case:** Verify that HTTP requests to the root are served correctly by Nginx (displaying `index.html`).
+    * **Test Case:** Verify that requests to `/ws` are correctly proxied to the Ratchet WebSocket server on port 8080.
+* **Dockerized Environment:**
+    * **Test Case:** Run `docker compose -f docker-compose.dev.yml up --build -d`. Verify all services (php, websocket, db, nginx) start correctly without errors.
+    * **Test Case:** Access the application via `http://localhost` and test end-to-end functionality.
+    * **Test Case:** Check logs of each container (`docker compose logs <service_name>`) for any errors during operation.
+
+**5.3 Testing Strategy**
+
+1.  **Developer Testing:** Developers perform unit tests and basic integration tests during development.
+2.  **Manual End-to-End Testing:**
+    * Open the application in two different browser windows or tabs (or different browsers/machines).
+    * Enter the same room name in both.
+    * Verify local video appears.
+    * Verify remote video appears after a short delay.
+    * Verify audio is transmitted and received.
+    * Test call termination from both sides.
+    * Test with different room names.
+    * Check browser developer console for errors.
+    * Check WebSocket server logs and Docker container logs for errors.
+3.  **Cross-Browser Testing (Manual):** Test functionality on recent versions of major browsers (Chrome, Firefox, Edge, Safari if available) to ensure WebRTC compatibility.
+4.  **Network Condition Testing (Basic Manual):** If possible, test with clients on different networks to ensure STUN server is aiding NAT traversal. This can be challenging to fully simulate without specific tools.
+
+Due to the P2P and real-time nature of WebRTC, fully automated end-to-end testing can be complex. A combination of automated unit tests for backend logic/frontend utility functions and thorough manual integration/end-to-end testing is a practical approach for this scale of project.
+
+-----------------------------------------------------------------------------------------------
+-- CHAPTER 6: CONCLUSION & FUTURE SCOPE --
+-----------------------------------------------------------------------------------------------
+
+                            CHAPTER 6: CONCLUSION & FUTURE SCOPE
+
+This chapter summarizes the "Call Room" project, highlighting its achievements and functionalities. It also discusses potential areas for future development and enhancement.
+
+**6.1 Conclusion**
+
+The "Call Room" project successfully demonstrates the development of a lightweight, peer-to-peer video and audio calling application using a stack of open-source web technologies. The primary objectives of creating a simple, room-based communication tool leveraging WebRTC for direct P2P media streaming and WebSockets (PHP Ratchet) for signaling have been achieved.
+
+The application allows users to easily create or join rooms by name, establishing a two-party video call. Key technical achievements include the implementation of a dynamic pairing mechanism using a MySQL database for transient state, robust WebRTC negotiation incorporating "polite" and "impolite" peer logic to minimize connection failures, and the containerization of the entire system using Docker and Docker Compose for ease of deployment and development.
+
+The project serves as a practical example of integrating frontend WebRTC capabilities with a backend signaling server. The modular structure of the code, with distinct frontend JavaScript files for media, peer connection, and call logic, and backend PHP classes for WebSocket handling and room management, promotes maintainability and understanding. The retro-themed CSS provides a unique, minimalist user experience.
+
+While designed for two participants per room instance, the underlying WebSocket server can handle multiple concurrent rooms. The use of Nginx as a web server and reverse proxy for WebSockets ensures efficient handling of HTTP and WebSocket traffic.
+
+In conclusion, "Call Room" provides a functional and educational platform for simple P2P video communication, showcasing how modern web technologies can be combined to build real-time interactive applications.
+
+**6.2 Future Scope**
+
+While the "Call Room" application fulfills its core objectives, there are several areas where its functionality and features could be expanded or improved in the future:
+
+* **Multi-Party Conferencing:**
+    * Extend the application to support more than two participants in a room. This would likely require transitioning from a purely P2P mesh for media to using a Selective Forwarding Unit (SFU) like Janus, Jitsi Videobridge, or Mediasoup to manage media streams efficiently. The current signaling server could be adapted or replaced to support SFU-based architectures.
+* **Enhanced Features:**
+    * **Screen Sharing:** Implement functionality for users to share their screen with the other participant(s).
+    * **Text Chat:** Add a text-based chat feature within the call room.
+    * **File Sharing:** Allow users to share files directly with each other during a call (leveraging WebRTC data channels).
+    * **Recording:** Implement client-side or server-side recording of calls (with user consent).
+* **Improved User Management & Authentication:**
+    * Implement a proper user authentication system (e.g., username/password, OAuth) instead of relying on randomly generated or `localStorage` usernames.
+    * Introduce user profiles and contact lists.
+    * Implement private/password-protected rooms.
+* **Scalability and Robustness:**
+    * For larger-scale deployments (especially with an SFU), horizontally scale the WebSocket signaling server and the SFU instances.
+    * Implement more sophisticated error handling and connection recovery mechanisms.
+    * Consider using a more robust message queue (e.g., Redis Pub/Sub, RabbitMQ) for signaling if scaling WebSocket servers horizontally.
+* **TURN Server Implementation:**
+    * Integrate a TURN (Traversal Using Relays around NAT) server (e.g., Coturn) alongside the STUN server to handle more complex NAT scenarios where P2P connection might fail, by relaying media through the TURN server.
+* **User Interface and User Experience (UI/UX) Enhancements:**
+    * Develop a more polished and feature-rich user interface.
+    * Add indicators for network quality, microphone mute status, etc.
+    * Improve responsive design for various screen sizes, including mobile devices.
+* **Security Enhancements:**
+    * Ensure all communication (HTTP, WebSocket) is over HTTPS/WSS by default with proper certificate management (e.g., Let's Encrypt in Nginx).
+    * Implement rate limiting and other measures to protect against abuse on the signaling server.
+* **Testing and CI/CD:**
+    * Develop more comprehensive automated tests, including end-to-end tests for the WebRTC flow if feasible (e.g., using tools like Puppeteer or Selenium with WebRTC internals).
+    * Set up a Continuous Integration/Continuous Deployment (CI/CD) pipeline for automated building, testing, and deployment.
+* **Mobile Application:**
+    * Develop native mobile applications (iOS/Android) or a Progressive Web App (PWA) for better mobile user experience, leveraging mobile WebRTC capabilities.
+
+These potential enhancements could transform "Call Room" from a simple P2P calling application into a more comprehensive and versatile communication platform.
+
+-----------------------------------------------------------------------------------------------
+-- REFERENCES --
+-----------------------------------------------------------------------------------------------
+
+                                     REFERENCES
+
+During the development of the "Call Room" project, knowledge and understanding were derived from the official documentation and general concepts related to the following technologies and resources:
+
+* **WebRTC (Web Real-Time Communication):**
+    * Mozilla Developer Network (MDN) Web Docs - WebRTC API: [https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API](https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API)
+    * WebRTC.org - Official Website: [https://webrtc.org/](https://webrtc.org/)
+    * Google Web Fundamentals - Real-time Communication with WebRTC: [https://developers.google.com/web/fundamentals/media/webrtc](https://developers.google.com/web/fundamentals/media/webrtc)
+
+* **PHP:**
+    * PHP Official Documentation: [https://www.php.net/manual/en/](https://www.php.net/manual/en/)
+
+* **Ratchet - PHP WebSocket Library:**
+    * Ratchet Official Website: [http://socketo.me/](http://socketo.me/)
+    * Ratchet GitHub Repository: [https://github.com/ratchetphp/Ratchet](https://github.com/ratchetphp/Ratchet)
+
+* **MySQL:**
+    * MySQL Official Documentation: [https://dev.mysql.com/doc/](https://dev.mysql.com/doc/)
+
+* **Nginx:**
+    * Nginx Official Documentation: [https://nginx.org/en/docs/](https://nginx.org/en/docs/)
+    * Nginx as a WebSocket Proxy: [https://nginx.org/en/docs/http/websocket.html](https://nginx.org/en/docs/http/websocket.html)
+
+* **Docker & Docker Compose:**
+    * Docker Official Documentation: [https://docs.docker.com/](https://docs.docker.com/)
+    * Docker Compose Official Documentation: [https://docs.docker.com/compose/](https://docs.docker.com/compose/)
+
+* **JavaScript (ES6 Modules, MediaDevices API, WebSocket API):**
+    * Mozilla Developer Network (MDN) Web Docs - JavaScript: [https://developer.mozilla.org/en-US/docs/Web/JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+    * MDN Web Docs - MediaDevices: [https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices)
+    * MDN Web Docs - WebSocket API: [https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API)
+
+* **HTML5 & CSS3:**
+    * Mozilla Developer Network (MDN) Web Docs - HTML: [https://developer.mozilla.org/en-US/docs/Web/HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+    * Mozilla Developer Network (MDN) Web Docs - CSS: [https://developer.mozilla.org/en-US/docs/Web/CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+
+* **General Web Development Concepts:**
+    * Understanding of Client-Server Architecture.
+    * Principles of Peer-to-Peer Networking.
+    * Signaling in WebRTC (Offer/Answer Model, ICE).
+    * STUN/TURN servers.
+
+(Note: You might want to add specific articles or tutorials if you heavily relied on them and your university guidelines suggest more specific citations.)
+
+-----------------------------------------------------------------------------------------------
+-- END OF PROJECT REPORT --
+-----------------------------------------------------------------------------------------------
